@@ -13,6 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
         if (taskText) {
             const listItem = document.createElement("li");
             listItem.textContent = taskText;
+            listItem.addEventListener("click", selectTask); // Add the event listener to new tasks to select them as well
             taskList.appendChild(listItem);
             taskInput.value = "";
             saveTasks();
